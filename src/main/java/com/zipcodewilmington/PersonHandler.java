@@ -11,41 +11,36 @@ public class PersonHandler {
     }
 
     public String whileLoop() {
-        String result = "";
-        // create a `counter`
-        // while `counter` is less than length of array
-            // begin loop
-
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
-
-            // end loop
-        return result;
+        StringBuilder temp = new StringBuilder();
+        int counter = 0;
+        while (counter < personArray.length) {
+            String currentPerson = String.valueOf(personArray[counter]);
+            temp.append(currentPerson);
+            counter++;
+        }
+        return temp.toString();
     }
 
 
 
     public String forLoop() {
-        String result = "";
-        // identify initial value
-        // identify terminal condition
-        // identify increment
+        StringBuilder temp = new StringBuilder();
 
-        // use the above clauses to declare for-loop signature
-            // begin loop
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
-            // end loop
-
-        return result;
+        for (int i = 0; i < personArray.length; i++) {
+            temp.append(personArray[i]);
+        }
+        return temp.toString();
     }
 
 
 
     public String forEachLoop() {
-        String result = "";
+        StringBuilder temp = new StringBuilder();
+        for (Person p : personArray) {
+            temp.append(p);
+        }
+        return temp.toString();
+
         // identify array's type
         // identify array's variable-name
 
@@ -54,8 +49,6 @@ public class PersonHandler {
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
             // end loop
-
-        return result;
     }
 
 
